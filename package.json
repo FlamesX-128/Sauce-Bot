@@ -2,21 +2,41 @@
   "name": "nhentai-bot",
   "version": "1.0.1",
   "description": "An nHentai bot for ya'll perverts :smirk:",
-  "main": "hentai.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon -e ts --exec \"npm run build && npm start\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chaosinsurgent/NHentaiBot.git"
   },
-  "author": "Mateo Elias#0937 (On Discord)",
-  "license": "ISC",
+  "author": {
+    "name": "Mateo Elias#0937 (On Discord)",
+    "url": "https://github.com/MateoElias"
+  },
+  "contributors": [
+    {
+      "name": "FlamesX-128",
+      "url": "https://github.com/FlamesX-128"
+    }
+  ],
+  "license": "undefined",
   "bugs": {
     "url": "https://github.com/chaosinsurgent/NHentaiBot/issues"
   },
   "homepage": "https://github.com/chaosinsurgent/NHentaiBot#readme",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.3",
+    "nana-api": "^1.1.4",
+    "nhentai-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.2",
+    "nodemon": "^2.0.12"
   }
 }
